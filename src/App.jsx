@@ -8,6 +8,7 @@ function App() {
 
   function handleGenerateQrCode() {
     setQrCode(input);
+    setInput('');
   }
 
   return (
@@ -20,6 +21,7 @@ function App() {
           type="text"
           name="qr-code"
           placeholder="Enter your value here"
+          value={input}
         />
         <button
           disabled={input && input.trim() !== "" ? false : true}
